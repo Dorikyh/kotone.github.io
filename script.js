@@ -1,5 +1,5 @@
 function updateStatistics() {
-    fetch('http://78.108.218.94:19132/api/stats')
+    fetch('https://api.kotone.tech/stats')
       .then(response => response.json())
       .then(data => {
         // Update values in the HTML
