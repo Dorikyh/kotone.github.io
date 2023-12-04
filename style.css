@@ -1,186 +1,175 @@
 body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   background-color: #212731;
-  padding-top: 2em;
-}
-
-
-
-h1, h2, h3, li, p{
-  color: #fff;
-}
-
-h2 {
-  font-size: 2.5em;
-  margin-bottom: 0.3em;
-}
-
-.window {
-  font-size: large;
-}
-
-h2{
-  background-color: #1a1a1a;
-  border-radius: 10px;
-  padding: 0.2em;
-  box-shadow: 5px 8px 10px #141414;
-  text-align: center;
-
-}
-
-.lynk{
-  background-color: #181B1D;
-  border-radius: 5px;
-  padding: 0.15em;
-}
-
-.cuadro {
-  margin-bottom: 10px;
-  background-color: #181B1D;
-  border-radius: 10px;
-  box-shadow: 3px 10px 7px rgba(0, 0, 0, 0.3);
-  padding: 0.1em 0.2em 0.2em 0.2em; /* reduce padding-top a 0.1em */
-  box-sizing: border-box;
-}
-
-.cuadro h2 {
-  font-size: 1.5em;
-  margin-bottom: 0.3em;
-  margin-top: 0.1em;
-  background-color: #181B1D;
-  border-radius: 10px;
-  padding: 0.2em;;
-  box-shadow: 2px 7px 8px rgba(0, 0, 0, 0.3);
-}
-
-.cuadro p {
-  margin-bottom: 10px;
-  background-color: #242424;
-  border-radius: 10px;
-  padding: 0.2em;
-  box-shadow: 2px 7px 8px rgba(0, 0, 0, 0.3);
-}
-
-
-p{
-  font-size: 1.4em;
-  margin: 0;
-  text-align: center;
-}
-img{
-border-radius: 20%;
-box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-width: 4em;
-}
-
-header {
-  background-color: #111315;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 20px;
-  box-shadow: 0px 6px 8px rgb(8, 8, 8);
-}
-
-header img {
-  width: 3em;
-  border-radius: 20%;
-  float: left; /* flota la imagen hacia la izquierda */
-  margin-right: 20px; /* agrega un margen a la derecha para separar el texto */
-}
-
-header h1 {
-  margin-top: 0.3em; /* elimina el margen superior para que el encabezado se acerque a la imagen */
-  float: left; /* flota el encabezado hacia la izquierda */
-}
-
-header nav ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-}
-
-header nav ul li {
-  margin: 0 5px;
-}
-
-header nav ul li a {
-  color: #fff;
-  text-decoration: none;
-  background-color: #4d5a86;
-  padding: 0.4rem;
-  border-radius: 0.4em;
-}
-
-header nav ul li a:hover {
   color: #ccc;
+  margin: 0;
+}
+
+p {
+  font-size: 1.4rem;
 }
 
 main {
   margin: auto;
-  padding: 20px;
   width: 70%;
 }
 
-li a {
-  color:#ccc;
-  font-weight: bold;
-}
-p {
-  display:inline-block;
+.text_subtitle {
+  font-size: 2.2rem;
+  margin-top: 0px;
+
 }
 
-.highligt {
-  font-size: 1.3em;
+h1 {
+  font-size: 5rem;
+  color: white;
+  margin-bottom: 0;
+  line-height: 1;
 }
 
-.bigg {
-  font-size: 3em;
-  margin-top: 1.7em;
-  margin-bottom: 0.5em;
+h2 {
+  font-size: 3rem;
+  margin-bottom: 0;
+}
+
+/* Change the link color to #111 (black) on hover */
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 5px;
+  overflow: hidden;
+  background-color: #161c27;
+  display: flex;
+  justify-content: center;
+}
+
+nav li {
+  transition: opacity 0.5s ease-in-out; /* Transición de opacidad al hacer hover */
+}
+
+nav li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+nav li:hover {
+  opacity: 0.5; /* Reduce la opacidad al hacer hover */
+}
+
+/* Animación de fadeOut al hacer hover */
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.5;
+  }
+}
+
+nav li:hover {
+  animation-name: fadeOut;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+}
+
+#bot-stats {
+  margin-top: 10vh;
+}
+
+.stats-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20vh;
+}
+
+.stat-item {
+  margin-bottom: 0;
+  font-size: 2rem;
+  font-weight: 500;
+  color: #908d9c;
+}
+
+
+#ai-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 15vh;
+}
+
+.ai-content {
+  width: 50%; /* Ajusta el ancho según tu diseño */
+}
+
+#ai-img {
+  width: 40%; /* Ajusta el ancho según tu diseño */
+  height: auto;
+  border-radius: 5%;
+}
+
+
+#data-info{
+  width: 50%;
+  text-align: right;
+  margin-left: 50%;
+  margin-bottom: 15vh;
+  
+}
+
+a {
+  color: #ccc;
 }
 
 footer {
-  background-color: rgb(8, 8, 8);
-  color: #fff;
-  padding: 20px;
+  background-color: #161c27;
   text-align: center;
-  box-shadow: 0px 0px 30px rgb(8, 8, 26);
+  padding: 30px;
 }
 
-footer p {
-    margin: 0;
-    font-weight: 700;
+@media screen and (max-width: 600px) {
+  nav li {
+    float: none;
+  }
+
+  nav li a {
+    display: block;
+    text-align: left;
   }
   
-  @media only screen and (max-width: 600px) {
-    .mobile-hidden {
-      display: none;
-    }
+  #ai-info {
+    width: 100%;
   }
 
-b {
-  text-decoration: underline;
-  font-size: 1.6em;
-  color: #7289da;
-  text-align: center;
-  display: block;
-}
+  #data-info {
+    width: 100%;
+    margin-left: 0;
+    text-align: left;
+  }
+  
+  .stats-list {
+    flex-direction: column;
+  }
+  .stat-item {
+    margin-bottom: 3vh;
+  }
 
+  .ai-content {
+    width: 100%; /* Ocupa el ancho completo del contenedor en dispositivos móviles */
+    margin-right: 10px; /* Agrega un espacio a la derecha del texto */
+  }
 
-.rounded-image{
-  border-radius: 20%;
-  object-fit: cover;
-  width: 300px;
-  height: 300px;
-}
+  #ai-info {
+    flex-direction: column; /* Cambia la dirección del flexbox a columna en dispositivos móviles */
+    align-items: flex-start; /* Alinea los elementos al principio */
+    width: 100%; 
+  }
 
-
-
+  #ai-img {
+    width: 100%; /* Ocupa el ancho completo del contenedor en dispositivos móviles */
+}}
+/* ... Tu CSS existente ... */
