@@ -84,7 +84,7 @@ nav li:hover {
   padding: 0;
   display: flex;
   justify-content: space-between;
-  margin-bottom: 20vh;
+  margin-bottom: 15vh;
 }
 
 .stat-item {
@@ -112,6 +112,30 @@ nav li:hover {
   border-radius: 5%;
 }
 
+/* link de la invitacion del bot simulando un boton de discord */
+#bot-invite {
+  background-color: #7289da;
+  border-radius: 5px;
+  padding: 10px;
+  color: white;
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: 500;
+  transition: opacity 0.2s ease-in-out; /* Transición de opacidad al hacer hover */
+  /* centralo con margin: auto; */
+  display: block;
+  text-align: center;
+  margin: auto;
+  width: 200px;
+  /* espacio entre el boton y el footer */
+  margin-bottom: 10vh;
+  
+}
+
+#bot-invite:hover {
+  opacity: 0.5; /* Reduce la opacidad al hacer hover */
+}
+
 
 #data-info{
   width: 50%;
@@ -132,6 +156,7 @@ footer {
 }
 
 @media screen and (max-width: 600px) {
+
   nav li {
     float: none;
   }
