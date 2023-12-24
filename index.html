@@ -6,16 +6,31 @@
   <link rel="stylesheet" href="style.css">
   <meta name="description" content="Kotone is the Discord Bot your server needs! Check it out!">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" type="image/png" href="https://cdn.discordapp.com/avatars/889540062956634164/b5391187966e16361ddb4a52b33ca1d8.png">
+  <link rel="icon" type="image/png" href="kotone.png">
 
-  <nav>
-    <ul>
+  <nav class="navbar">
+    <div class="menu-toggle">
+      <label for="toggle" class="toggle-btn">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+      <input type="checkbox" id="toggle" />
+      <ul class="nav-links">
+        <li><a href="index">Homepage</a></li>
+        <li><a href="terms">Privacy Terms</a></li>
+        <li class="support-server-mobile"><a href="https://discord.com/invite/appnkdReFk">Support Server</a></li>
+        <li><a href="https://discord.com/oauth2/authorize?&client_id=889540062956634164&scope=bot&permissions=2147862592">Invite Kotone</a></li>
+      </ul>
+    </div>
+    <ul class="nav-links-desktop">
       <li><a href="index">Homepage</a></li>
       <li><a href="terms">Privacy Terms</a></li>
       <li><a href="https://discord.com/invite/appnkdReFk">Support Server</a></li>
       <li><a href="https://discord.com/oauth2/authorize?&client_id=889540062956634164&scope=bot&permissions=2147862592">Invite Kotone</a></li>
     </ul>
   </nav>
+  
 
 </head>
 <body>
@@ -31,12 +46,13 @@
 
     <section id="bot-stats">
       <ul class="stats-list">
-        <li class="stat-item">Servers: <span id="servers">Loading...</span></li>
-        <li class="stat-item">Users: <span id="users">Loading...</span></li>
-        <li class="stat-item">Used <span id="commands">Loading...</span> times</li>
+        <li class="stat-item">Servers: <span id="servers">000</span></li>
+        <li class="stat-item">Users: <span id="users">000</span></li>
+        <li class="stat-item">Used <span id="commands">0000</span> times</li>
       </ul>
 
       <a id="bot-invite" target="_blank" href="https://discord.com/oauth2/authorize?&client_id=889540062956634164&scope=bot&permissions=2147862592">Invite Kotone</a>
+      <a id="command-list" target="_blank" href="cmds">List of commands</a>
 
 
     </section>
