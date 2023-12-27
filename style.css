@@ -310,6 +310,63 @@ nav li:hover {
   animation-delay: 0.2s; /* Retraso para que la animación comience */
 }
 
+.command-list h3 {
+  font-size: 1.6rem;
+  margin-top: 0;
+  margin-bottom: 5px;
+}
+
+.command-list div {
+  background-color: #353535;
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 24px;
+  display: inline-block;
+  margin: 10px;
+  width: 420px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.category-select {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  font-size: 2rem;
+  margin-bottom: 4vh;
+}
+
+.command-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 10vh;
+}
+
+/* Estilo para el select */
+.category-select select {
+  background-color: #353535;
+  color: #ccc;
+  border: none;
+  padding: 10px;
+  border-radius: 10px;
+  margin-left: 10px;
+  font-size: 1rem;
+  font-weight: 800;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.fade-inn {
+  animation: fadeInAnimationn 0.5s ease-in-out;
+  opacity: 0;
+}
+
+@keyframes fadeInAnimationn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 
 
 
