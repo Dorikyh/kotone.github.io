@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Kotone | List of commands</title>
+  <link rel="stylesheet" href="style.css">
+  <meta name="description" content="Kotone is the Discord Bot your server needs! Check it out!">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="https://cdn.discordapp.com/avatars/889540062956634164/b5391187966e16361ddb4a52b33ca1d8.png">
+
+  <nav>
+    <ul>
+      <li><a href="index">Homepage</a></li>
+      <li><a href="terms">Privacy Terms</a></li>
+      <li><a href="https://discord.com/invite/appnkdReFk">Support Server</a></li>
+      <li><a href="https://discord.com/oauth2/authorize?&client_id=889540062956634164&scope=bot&permissions=2147862592">Invite Kotone</a></li>
+    </ul>
+  </nav>
+
+</head>
+<body>
+  
+  <main>
+
+    <section id="bot-info">
+      <h1>List of commands</h1>
+
+      <p class="text_subtitle">The best list of commands you've ever seen.</p>
+      <p>We've streamlined the experience, avoiding an excess of commands to make it user-friendly and well-organized. Moreover, our commands are updated almost daily. Currently, we're finishing the translation of all commands into English, French, Italian, and Spanish, and we aim to add more languages in the future.</p>
+    </section>
+
+    <section id="bot-stats">
+      <ul class="stats-list">
+        <li class="stat-item">Millions of pics</li>
+        <li class="stat-item">Translation: 55%</li>
+        <li class="stat-item">Free for everyone</li>
+      </ul>
+
+      <a id="bot-invite" target="_blank" href="https://discord.com/oauth2/authorize?&client_id=889540062956634164&scope=bot&permissions=2147862592">Invite Kotone</a>
+
+    </section>
+
+    <section class="category-select">
+
+    <label for="categoryFilter">Select a category:</label>
+    <select id="categoryFilter" onchange="filterByCategory()">
+      <option value="all">All</option>
+      <option value="minecraft">Minecraft</option>
+      <option value="nsfw">NSFW</option>
+      <option value="utility">Utility</option>
+      <option value="ai">Artificial intelligence</option>
+      <option value="entertainment">Entertainment</option>
+    </select>
+
+    </section>
+
+    <section class="command-list">
+
+      
+    
+      <div class="mc-ping category-minecraft">
+        <h3>/mc-ping</h3>
+        <span>📡 Get useful information about a Java Minecraft server</span>
+      </div>
+      
+      <div class="ai-nsfw category-ai">
+        <h3>/ai-nsfw</h3>
+        <span>🔥 Create the NSFW Waifu of your dreams with AI!</span>
+      </div>
+      <div class="cat category-entertainment">
+        <h3>/cat</h3>
+        <span>😺 Get random cat images and gifs</span>
+      </div>
+      
+      <div class="mc-photo category-minecraft">
+        <h3>/mc-photo</h3>
+        <span>🖼️ Get Minecraft user skin images from different angles.</span>
+      </div>
+      
+      <div class="rule34 category-nsfw">
+        <h3>/rule34</h3>
+        <span>🔥 Get Rule34 images in any category you want!</span>
+      </div>
+      
+      <div class="nsfw category-nsfw">
+        <h3>/nsfw</h3>
+        <span>🔥 Get NSFW images & videos from all categories.</span>
+      </div>
+
+      <div class="bitcoin category-utility">
+          <h3>/bitcoin</h3>
+          <span>🪙 Retrieve the precise current value of bitcoin.</span>
+      </div>
+      <div class="help category-utility">
+          <h3>/help</h3>
+          <span>Display info about Kotone commands.</span>
+      </div>
+      <div class="waifu category-entertainment">
+          <h3>/waifu</h3>
+          <span>🔥 Get GIFs and pics of waifus in various categories.</span>
+      </div>
+      <div class="exchange category-utility">
+          <h3>/exchange</h3>
+          <span>💱 Retrieve the precise current value of bitcoin.</span>
+      </div>
+      <div class="bard category-ai">
+        <h3>/bard</h3>
+        <span>📖 Use Gemini Pro of Google (fast & free).</span>
+    </div>
+    <div class="balance category-utility">
+      <h3>/balance</h3>
+      <span>🤑 Get an user balance.</span>
+    </div>
+    <div class="chatgpt category-ai">
+      <h3>/chatgpt</h3>
+      <span>📖 Use GPT3.5 and GPT4-Turbo for free.</span>
+    </div>
+    <div class="hentai category-nsfw">
+      <h3>/hentai</h3>
+      <span>🔥 Watch hentai GIFs and pics!</span>
+    </div>
+    <div class="imagine category-ai">
+      <h3>/imagine</h3>
+      <span>🌄 Generate AI images with Dall-E 3 for free!</span>
+    </div>
+    <div class="track category-utility">
+      <h3>/track</h3>
+      <span>🔊 Get unique info of any song, like meaning and lyrics!</span>
+    </div>
+    <div class="claim category-utility">
+      <h3>/claim</h3>
+      <span>💸 Claim your daily bounty of credits for free!</span>
+    </div>
+    <div class="meme category-entertainment">
+      <h3>/meme</h3>
+      <span>🎊 Watch the most popular memes of the moment!</span>
+    </div>
+    <div class="nasaphoto category-entertainment">
+      <h3>/nasaphoto</h3>
+      <span>🔭 Get NASA's Astronomy Picture of the Day!</span>
+    </div>
+    <div class="identify category-ai">
+      <h3>/identify</h3>
+      <span>📝 Analyse the content of any image with AI!</span>
+    </div>
+    <div class="likes category-utility">
+      <h3>/likes</h3>
+      <span>💓 Get your complete list of NSFW likes!</span>
+    </div>
+    <div class="lyrics category-utility">
+      <h3>/lyrics</h3>
+      <span>🎶 Get the lyrics of any song with translations!</span>
+    </div>
+    <div class="search category-entertainment">
+      <h3>/search</h3>
+      <span>🖼 Search any image using Google Images!</span>
+    </div>
+    <div class="wikipedia category-utility">
+      <h3>/wikipedia</h3>
+      <span>📜 Get data of any Wikipedia article!</span>
+    </div>
+    </section>
+    
+
+
+
+  </main>
+
+  <footer>Made by <a href="https://github.com/Dorikyh">Dorikyh</a><br><br>
+    <a href="https://discord.com/invite/appnkdReFk">Join to Support Server</a>
+  </footer>
+  <script src="script.js"></script>
+  <script src="cmds.js"></script>
+</body>
+</html>
