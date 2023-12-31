@@ -8,8 +8,26 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/png" href="kotone.png">
 
-  <nav>
-    <ul>
+  <nav class="navbar">
+    <div class="logo">
+      <img src="kotone.png" alt="Kotone Logo">
+      <span><a href="index">Kotone</a></span>
+    </div>
+    <div class="menu-toggle">
+      <label for="toggle" class="toggle-btn">
+        <span></span>
+        <span></span> 
+        <span></span>
+      </label>
+      <input type="checkbox" id="toggle" />
+      <ul class="nav-links">
+        <li><a href="index">Homepage</a></li>
+        <li><a href="terms">Privacy Terms</a></li>
+        <li class="support-server-mobile"><a href="https://discord.com/invite/appnkdReFk">Support Server</a></li>
+        <li><a href="https://discord.com/oauth2/authorize?&client_id=889540062956634164&scope=bot&permissions=2147862592">Invite Kotone</a></li>
+      </ul>
+    </div>
+    <ul class="nav-links-desktop">
       <li><a href="index">Homepage</a></li>
       <li><a href="terms">Privacy Terms</a></li>
       <li><a href="https://discord.com/invite/appnkdReFk">Support Server</a></li>
@@ -37,7 +55,7 @@
       </ul>
 
       <a id="bot-invite" target="_blank" href="https://discord.com/oauth2/authorize?&client_id=889540062956634164&scope=bot&permissions=2147862592">Invite Kotone</a>
-
+      <a id="command-list" href="support">Support Server</a>
     </section>
 
     <section class="category-select">
@@ -45,10 +63,10 @@
     <label for="categoryFilter">Select a category:</label>
     <select id="categoryFilter" onchange="filterByCategory()">
       <option value="all">All</option>
+      <option value="ai">AI</option>
       <option value="minecraft">Minecraft</option>
       <option value="nsfw">NSFW</option>
       <option value="utility">Utility</option>
-      <option value="ai">Artificial intelligence</option>
       <option value="entertainment">Entertainment</option>
     </select>
 
@@ -160,13 +178,11 @@
       <span>📜 Get data of any Wikipedia article!</span>
     </div>
     </section>
-    
-
 
 
   </main>
 
-  <footer>Made by <a href="https://github.com/Dorikyh">Dorikyh</a><br><br>
+  <footer>Made by <a href="https://dorikyh.xyz">Dorikyh</a><br><br>
     <a href="https://discord.com/invite/appnkdReFk">Join to Support Server</a>
   </footer>
   <script src="script.js"></script>
