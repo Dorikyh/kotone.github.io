@@ -17,14 +17,20 @@ main {
 .text_subtitle {
   font-size: 2.2rem;
   margin-top: 0px;
+  text-align: center;
+}
 
+#bot-info p {
+  text-align: center;
 }
 
 h1 {
-  font-size: 5rem;
+  font-size: 6rem;
   color: white;
   margin-bottom: 0;
   line-height: 1;
+  margin-top: 5vh;
+  text-align: center;
 }
 
 h2 {
@@ -35,13 +41,14 @@ h2 {
 /* Change the link color to #111 (black) on hover */
 nav ul {
   list-style-type: none;
-  margin: 0;
   padding: 5px;
+  margin: 0;
   overflow: hidden;
-  background-color: #141414;
-  display: flex;
   justify-content: center;
 }
+
+/* floating discord logo in the left bottom of the screen*/
+
 
 nav li {
   transition: opacity 0.5s ease-in-out; /* Transición de opacidad al hacer hover */
@@ -51,7 +58,7 @@ nav li a {
   display: block;
   color: white;
   text-align: center;
-  padding: 14px 16px;
+  padding: 14px 5px;
   text-decoration: none;
 }
 
@@ -75,8 +82,11 @@ nav li:hover {
   animation-fill-mode: forwards;
 }
 
-#bot-stats {
-  margin-top: 10vh;
+#buttons {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .stats-list {
@@ -86,8 +96,6 @@ nav li:hover {
   justify-content: space-between;
   margin-bottom: 10vh;
 }
-
-/* CSS adicional para el menú de hamburguesa */
 
 /* Estilo del icono de hamburguesa */
 .menu-toggle {
@@ -162,6 +170,38 @@ nav li:hover {
   opacity: 0;
 }
 
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #222222;
+  padding: 10px 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Agrega sombra al navbar */
+  width: calc(100% - 40px); /* Ancho del navbar - ajusta el padding */
+  /* centrar la navbar a la mitad */
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  width: 80%;
+  z-index: 1000; /* Asegura que esté por encima del resto del contenido */
+  border-radius: 10px;
+}
+
+
+
+.logo img {
+  width: 40px; /* Ajusta el tamaño del logo */
+  margin-right: 10px;
+}
+
+.logo span {
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+/* Estilos restantes para dispositivos móviles y otros elementos */
+/* ... (Tu CSS existente) ... */
 
 /* Estilos para dispositivos móviles */
 @media screen and (max-width: 599px) {
@@ -173,80 +213,7 @@ nav li:hover {
     position: relative;
   }
   
-  .menu-toggle {
-    display: flex;
-    align-items: center;
-    padding: 20px;
-    position: relative;
-    z-index: 1;
-  }
-  
-  .toggle-btn span {
-    background: #fff;
-    display: block;
-    height: 2px;
-    margin-bottom: 6px;
-    transition: transform 0.4s, opacity 0.4s;
-    width: 25px;
-  }
-  
-  .nav-links {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: none;
-    position: absolute;
-    top: 60px; /* Ajusta la posición del menú desplegable según tu diseño */
-    right: 0;
-    background: #141414;
-    z-index: 100;
-  }
-  
-  .nav-links li {
-    text-align: center;
-    margin-bottom: 10px;
-  }
-  
-  .nav-links li a {
-    display: block;
-    padding: 10px;
-    color: #fff;
-    text-decoration: none;
-  }
-  
-  .support-server-mobile {
-    display: block;
-    text-align: right;
-    margin-right: 20px;
-  }
-  
-  /* Mostrar el menú al hacer clic en el icono de hamburguesa */
-  #toggle:checked ~ .nav-links {
-    display: block;
-  }
-  
-  /* Animación del icono de hamburguesa */
-  .toggle-btn span:nth-child(1) {
-    transform-origin: 0 0;
-  }
-  
-  .toggle-btn span:nth-child(2) {
-    transform-origin: 0 100%;
-  }
-  
-  #toggle:checked ~ .toggle-btn span:nth-child(1) {
-    transform: rotate(45deg);
-  }
-  
-  #toggle:checked ~ .toggle-btn span:nth-child(2) {
-    transform: rotate(-45deg);
-  }
-  
-  #toggle:checked ~ .toggle-btn span:nth-child(3) {
-    opacity: 0;
-  }
 }
-
 /* Estilos para pantallas de mayor tamaño (escritorio) */
 @media screen and (min-width: 600px) {
   .menu-toggle {
@@ -293,15 +260,17 @@ nav li:hover {
 }
 
 /* Aplica la animación de fade in a los elementos de estadísticas */
+.stat-item span{
+  font-size: 3rem;
+  font-weight: 800;
+  color: #3eb83a;
+}
+
 .stat-item {
-  margin-bottom: 0;
   font-size: 2rem;
   font-weight: 500;
-  color: #908d9c;
-  background-color: #141414;
   padding: 15px;
-  border-radius: 20px;
-  box-shadow: #141414;
+  text-align: center;
 
   /* Agrega la transición con la animación de fade in */
   animation-name: fadeIn;
@@ -309,6 +278,7 @@ nav li:hover {
   animation-fill-mode: both; /* Mantener el estado final después de la animación */
   animation-delay: 0.2s; /* Retraso para que la animación comience */
 }
+
 
 .command-list h3 {
   font-size: 1.6rem;
@@ -338,7 +308,7 @@ nav li:hover {
 .command-list {
   display: flex;
   flex-wrap: wrap;
-  margin-bottom: 10vh;
+  justify-content: center;
 }
 
 /* Estilo para el select */
@@ -352,6 +322,8 @@ nav li:hover {
   font-size: 1rem;
   font-weight: 800;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  text-align: center;
+  width: 150px;
 }
 
 .fade-inn {
@@ -370,22 +342,61 @@ nav li:hover {
 
 
 
+/* animacion de cargando despues de refrescar la imagen */
+
+
+
+
+.more-info-button {
+  background-color: #4e5058;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;  
+}
+
 #ai-info {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  margin-bottom: 15vh;
+  justify-content: safe center;
+  margin-top: 5vh;
 }
+.embed-buttons {
+  display: flex;
+  align-items: flex-; /* Alinea los botones a la derecha */
+  z-index: 100; /* Asegura que esté por encima del contenido */
+}
+
+
 
 .ai-content {
-  width: 50%; /* Ajusta el ancho según tu diseño */
+  width: 30%; /* Ajusta el ancho según tu diseño */
+  align-items: center;
 }
 
-#ai-img {
-  width: 40%; /* Ajusta el ancho según tu diseño */
-  height: auto;
-  border-radius: 5%;
+
+/* Estilos para navegadores WebKit (Chrome, Safari) */
+/* Ancho de la barra */
+::-webkit-scrollbar {
+  width: 10px;
 }
+
+/* Estilo del riel (track) */
+::-webkit-scrollbar-track {
+  background: #5e5e5e;
+}
+
+/* Estilo de la barra en sí (thumb) */
+::-webkit-scrollbar-thumb {
+  background: #c084fc; /* Cambia el color de la barra */
+  border-radius: 5px;
+}
+
+/* Estilo al pasar el mouse sobre la barra */
+::-webkit-scrollbar-thumb:hover {
+  background: #a573d8; /* Cambia el color al pasar el mouse sobre la barra */
+}
+
 
 /* link de la invitacion del bot simulando un boton de discord */
 #bot-invite {
@@ -398,12 +409,11 @@ nav li:hover {
   font-weight: 500;
   transition: opacity 0.2s ease-in-out; /* Transición de opacidad al hacer hover */
   /* centralo con margin: auto; */
-  display: block;
   text-align: center;
-  margin: auto;
   width: 200px;
   /* espacio entre el boton y el footer */
   margin-bottom: 5vh;
+  margin-right: 40px;
 }
 
 #command-list {
@@ -416,9 +426,7 @@ nav li:hover {
   font-weight: 500;
   transition: opacity 0.2s ease-in-out; /* Transición de opacidad al hacer hover */
   /* centralo con margin: auto; */
-  display: block;
   text-align: center;
-  margin: auto;
   width: 200px;
   /* espacio entre el boton y el footer */
   margin-bottom: 5vh;
@@ -429,13 +437,8 @@ nav li:hover {
   opacity: 0.5; /* Reduce la opacidad al hacer hover */
 }
 
-
-#data-info{
-  width: 50%;
-  text-align: right;
-  margin-left: 50%;
-  margin-bottom: 15vh;
-  
+#command-list:hover {
+  opacity: 0.5; /* Reduce la opacidad al hacer hover */
 }
 
 a {
@@ -446,6 +449,18 @@ footer {
   background-color: #141414;
   text-align: center;
   padding: 30px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  color: white;
+  /* remove the decoration of the link */
+}
+
+.logo a {
+  text-decoration: none;
+  color: white;
 }
 
 @media screen and (max-width: 600px) {
@@ -464,7 +479,9 @@ footer {
   }
   main {
     width: 90%;
+    margin-top: 5vh;
   }
+  
   h1 {
     font-size: 3.5rem;
   }
@@ -473,6 +490,10 @@ footer {
   }
   .stats-list {
     align-items: center;
+  }
+
+  #buttons {
+    flex-direction: column;
   }
 
   #data-info {
@@ -498,8 +519,11 @@ footer {
     align-items: flex-start; /* Alinea los elementos al principio */
     width: 100%; 
   }
-
-  #ai-img {
-    width: 100%; /* Ocupa el ancho completo del contenedor en dispositivos móviles */
-}}
+  #bot-invite {
+    margin-right: 0px;
+  }
+  .discord-interface {
+    margin-left: 0px;
+  }
+}
 /* ... Tu CSS existente ... */
