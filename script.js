@@ -1,5 +1,5 @@
 function updateStatistics() {
-  fetch('https://api.kotone.tech/stats')
+  fetch('http://78.108.218.94:19132/stats')
     .then(response => response.json())
     .then(data => {
       // Format numbers with commas using toLocaleString()
@@ -11,7 +11,7 @@ function updateStatistics() {
       document.getElementById('servers').textContent = servers;
       document.getElementById('users').textContent = users;
       document.getElementById('commands').textContent = usedCommands;
-      
+
       // You can add logic here to update the third value of commands used if provided in the JSON
       // For example:
       // const commands = data.commands.toLocaleString();
